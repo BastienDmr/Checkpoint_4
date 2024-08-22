@@ -36,7 +36,9 @@ class SkillRepository extends AbstractRepository {
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all skills from the "skill" table
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+    const [rows] = await this.database.query(
+      `SELECT s.id, s.skill, c.label FROM ${this.table} AS s INNER JOIN category as c ON c.id = s.category_id ORDER BY s.id`
+    );
 
     // Return the array of skills
     return rows;

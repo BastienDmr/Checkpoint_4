@@ -1,4 +1,5 @@
 // Import the repository modules responsible for handling data operations on the tables
+const CategoryRepository = require("./models/CategoryRepository");
 const ItemRepository = require("./models/ItemRepository");
 const ProfilRepository = require("./models/ProfilRepository");
 const SkillRepository = require("./models/SkillRepository");
@@ -16,6 +17,7 @@ tables.item = new ItemRepository();
 tables.profil = new ProfilRepository();
 tables.skill = new SkillRepository();
 tables.project = new ProjectRepository();
+tables.category = new CategoryRepository();
 
 /* ************************************************************************* */
 

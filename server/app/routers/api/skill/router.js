@@ -3,16 +3,20 @@ const express = require("express");
 const router = express.Router();
 
 /* ************************************************************************* */
-// Import And Use Routers Here
+// Define Your API Routes Here
 /* ************************************************************************* */
 
-const itemsRouter = require("./items/router");
+// Import item-related actions
+const { browse, read, add } = require("../../../controllers/skillActions");
 
-router.use("/items", itemsRouter);
+// Route to get a list of items
+router.get("/", browse);
 
-const skillRouter = require("./skill/router");
+// Route to get a specific item by ID
+router.get("/:id", read);
 
-router.use("/skill", skillRouter);
+// Route to add a new item
+router.post("/", add);
 
 /* ************************************************************************* */
 
