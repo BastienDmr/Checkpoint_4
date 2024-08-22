@@ -2,6 +2,7 @@
 const ItemRepository = require("./models/ItemRepository");
 const ProfilRepository = require("./models/ProfilRepository");
 const SkillRepository = require("./models/SkillRepository");
+const ProjectRepository = require("./models/SkillRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -14,6 +15,7 @@ const tables = {};
 tables.item = new ItemRepository();
 tables.profil = new ProfilRepository();
 tables.skill = new SkillRepository();
+tables.project = new ProjectRepository();
 
 /* ************************************************************************* */
 
