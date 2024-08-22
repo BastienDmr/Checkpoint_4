@@ -3,10 +3,17 @@ import PropTypes from "prop-types";
 import "./LinkExtern.css";
 
 function LinkExtern({ data, text, img }) {
+  const cv = text.includes("CV");
+
   return (
     <div className="link-box">
-      <img src={img} alt="" />
-      <a href={data} target="_blank" rel="noopener noreferrer">
+      <a
+        href={data}
+        target="_blank"
+        rel="noopener noreferrer"
+        download={cv ? "CV Bastien Domer" : undefined}
+      >
+        <img src={img} alt="" />
         {text}
       </a>
     </div>

@@ -38,13 +38,13 @@ function Home() {
           className="style-title-h3"
           data="Vous avez un projet web ? Je le transforme en succès en ligne."
         />
-        <article className="link-container">
-          <LinkExtern data={profil.github} text="Github" img={github} />
-          <LinkExtern data={profil.linkedin} text="Linkedin" img={linkedin} />
-          <LinkExtern data={profil.gmail} text="Gmail" img={mail} />
-          <LinkExtern data={profil.discord} text="Discord" img={discord} />
-          <LinkExtern data={profil.cv} text="CV" img={download} />
-        </article>
+      </section>
+      <section className="link-container">
+        <LinkExtern data={profil.github} text="Github" img={github} />
+        <LinkExtern data={profil.linkedin} text="Linkedin" img={linkedin} />
+        <LinkExtern data={`mailto:${profil.email}`} text="Gmail" img={mail} />
+        <LinkExtern data={profil.discord} text="Discord" img={discord} />
+        <LinkExtern data={profil.cv} text="CV" img={download} />
       </section>
       <section className="skills-container">
         <h2 className="style-title-h2">Skills</h2>
