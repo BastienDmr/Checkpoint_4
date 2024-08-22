@@ -1,8 +1,16 @@
 import { useLoaderData } from "react-router-dom";
+
 import SkillsComponent from "../../components/Skills/SkillsComponent";
+import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
+import LinkExtern from "../../components/LinkExtern/LinkExtern";
+
+import github from "../../assets/images/github.svg";
+import linkedin from "../../assets/images/linkedin.svg";
+import mail from "../../assets/images/mail.svg";
+import download from "../../assets/images/download.svg";
+import discord from "../../assets/images/discord.svg";
 
 import "./Home.css";
-import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
 
 function Home() {
   const { skills, profil } = useLoaderData();
@@ -30,6 +38,13 @@ function Home() {
           className="style-title-h3"
           data="Vous avez un projet web ? Je le transforme en succès en ligne."
         />
+        <article className="link-container">
+          <LinkExtern data={profil.github} text="Github" img={github} />
+          <LinkExtern data={profil.linkedin} text="Linkedin" img={linkedin} />
+          <LinkExtern data={profil.gmail} text="Gmail" img={mail} />
+          <LinkExtern data={profil.discord} text="Discord" img={discord} />
+          <LinkExtern data={profil.cv} text="CV" img={download} />
+        </article>
       </section>
       <section className="skills-container">
         <h2 className="style-title-h2">Skills</h2>
