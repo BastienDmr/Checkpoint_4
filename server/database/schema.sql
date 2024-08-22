@@ -14,6 +14,7 @@ create table profil (
   cv varchar(255),
   github VARCHAR(255),
   linkedin VARCHAR(255),
+  discord VARCHAR(255),
   admin BOOLEAN
 );
 
@@ -61,7 +62,7 @@ INSERT INTO skill (skill, category_id) VALUES ("Git", 4);
 INSERT INTO skill (skill, category_id) VALUES ("Github", 4);
 INSERT INTO skill (skill, category_id) VALUES ("Méthode Agile", 4);
 
-INSERT INTO profil (firstname, lastname, email, password, photo, cv, github, linkedin, admin) VALUES ("Bastien", "Domer", "domer.bastien@gmail.com", "12345", "photo","cv", "https://github.com/BastienDmr", "https://www.linkedin.com/in/bastien-domer/", true);
+INSERT INTO profil (firstname, lastname, email, password, photo, cv, github, linkedin, discord, admin) VALUES ("Bastien", "Domer", "domer.bastien@gmail.com", "12345", "photo","cv", "https://github.com/BastienDmr", "https://www.linkedin.com/in/bastien-domer/", "discord", true);
 INSERT INTO project (title, subtitle, link, profil_id) VALUES ("Book Of Wilders", "Ce projet est un site web structuré avec HTML, CSS, et JavaScript. Ceci est mon premier projet de formation.", "https://github.com/BastienDmr/projetBookWilders", 1);
 INSERT INTO project (title, subtitle, link, profil_id) VALUES ("Wilders Movies Club", "Ce projet a été mon premier projet React. Réalisé lors de ma formation a la Wild Code School.", "https://github.com/BastienDmr/Wilders-Movies-Club", 1);
 INSERT INTO project (title, subtitle, link, profil_id) VALUES ("Galactic Fight", "Projet Le dépôt GitHub Galactic-Fight est un projet de développement web utilisant le framework Harmonia, une base pour les projets suivant la stack React-Express-MySQL. Il inclut des outils comme Vite pour le client React, et des scripts pour la migration et le seed de base de données. Le projet est configuré pour être déployé via Docker et Traefik, facilitant la gestion des environnements et des variables spécifiques.", "https://github.com/ITrogg/Galactic-Fight", 1);
