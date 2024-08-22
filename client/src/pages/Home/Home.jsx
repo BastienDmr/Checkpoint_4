@@ -17,9 +17,9 @@ function Home() {
 
   return (
     <>
-      <h1>Projet Bastien</h1>
+      <h1 className="style-title-h1">Projet Bastien</h1>
       <section className="skills-container">
-        <h2>Skills</h2>
+        <h2 className="style-title-h2">Skills</h2>
         <article className="skills-article">
           {Object.keys(skillsByCategory).map((category) => (
             <SkillsComponent

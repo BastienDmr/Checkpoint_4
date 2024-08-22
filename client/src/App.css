@@ -17,4 +17,37 @@ body {
   --color-text-title: #d0e2fa;
   --color-box: #1d2a3c;
   --color-text-subtitle: #ffffff;
+  --font-text: "Jost";
+  --font-size-h1: 4rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-text: 1.3rem;
+  --font-size-text-small: 0.2rem;
+  --line-height: 150%;
+  --font-size-text-label: 1.3rem;
+}
+
+.style-title-h1 {
+  color: var(--color-text-title);
+  font-size: var(--font-size-h1);
+  font-family: var(--font-text);
+}
+
+.style-title-h2 {
+  color: var(--color-text-title);
+  font-size: var(--font-size-h2);
+  font-family: var(--font-text);
+}
+
+.style-title-h3 {
+  color: var(--color-text-title);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-text);
+}
+
+.paragraph-style {
+  font-family: var(--font-text);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height);
+  color: var(--color-text-subtitle);
 }

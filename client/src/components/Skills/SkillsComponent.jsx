@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 function SkillsComponent({ category, skills }) {
   return (
     <div>
-      <h3>{category}</h3>
+      <h3 className="style-title-h3">{category}</h3>
       {skills.map((skill) => (
-        <li key={`${category}-${skill}`}>{skill}</li>
+        <li className="paragraph-style" key={`${category}-${skill}`}>
+          {skill}
+        </li>
       ))}
     </div>
   );

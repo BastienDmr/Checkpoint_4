@@ -1,9 +1,15 @@
 .skills-container {
   h2 {
     text-align: center;
+    margin: 2rem;
   }
   .skills-article {
     display: flex;
     justify-content: space-around;
+    div {
+      h3 {
+        margin: 1rem 0;
+      }
+    }
   }
 }
