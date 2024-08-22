@@ -18,8 +18,11 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: async () => {
           try {
-            const skills = await connexion.get("/api/skill");
-            return skills.data;
+            const [skillsRes, profilRes] = await Promise.all([
+              connexion.get("/api/skill"),
+              connexion.get(`/api/profil/1`),
+            ]);
+            return { skills: skillsRes.data, profil: profilRes.data };
           } catch (error) {
             throw new Error(error);
           }
