@@ -13,16 +13,34 @@
   h2 {
     text-align: center;
     margin: 2rem;
+    animation: focus-in-expand 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   .skills-article {
     display: flex;
     justify-content: space-around;
     div {
+      animation: slide-in-fwd-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
       h3 {
         margin: 1rem 0;
       }
     }
   }
+}
+.skills-article > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.skills-article > div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.skills-article > div:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.skills-article > div:nth-child(4) {
+  animation-delay: 0.7s;
 }
 
 @keyframes focus-in-expand {
@@ -33,6 +51,16 @@
   }
   100% {
     filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
     opacity: 1;
   }
 }
