@@ -1,5 +1,7 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 
+import ModifyProject from "../../components/ModifyProject/ModifyProject";
+
 import connexion from "../../services/connexion";
 
 function ProjectDetail() {
@@ -18,8 +20,9 @@ function ProjectDetail() {
 
   return (
     <>
-      <h1>ProjectDetail</h1>
-      <p>fd</p>
+      <h1>{project.title}</h1>
+      <p>{project.subtitle}</p>
+      <ModifyProject projectId={project.id} />
       <button type="button" onClick={handleDelete} className="btn">
         Supprimer
       </button>
