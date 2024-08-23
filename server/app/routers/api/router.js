@@ -18,6 +18,10 @@ const profilRouter = require("./profil/router");
 
 router.use("/profil", profilRouter);
 
+const projectRouter = require("./project/router");
+
+router.use("/project", projectRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
