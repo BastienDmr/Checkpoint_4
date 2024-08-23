@@ -39,10 +39,14 @@ const router = createBrowserRouter([
         element: <ProjectDetail />,
         loader: async ({ params }) => {
           try {
-            const projectDetails = await connexion.get(
-              `/api/project/${params.id}`
-            );
-            return projectDetails.data;
+            const [profilRes, projectDetails] = await Promise.all([
+              connexion.get(`/api/profil/1`),
+              connexion.get(`/api/project/${params.id}`),
+            ]);
+            return {
+              profil: profilRes.data,
+              project: projectDetails.data,
+            };
           } catch (error) {
             throw new Error(error);
           }
