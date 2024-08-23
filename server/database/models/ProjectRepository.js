@@ -23,8 +23,7 @@ class ProjectRepository extends AbstractRepository {
   */
   // The Rs of CRUD - Read operations
 
-  /*
-   async read(id) {
+  async read(id) {
     // Execute the SQL SELECT query to retrieve a specific project by its ID
     const [rows] = await this.database.query(
       `select * from ${this.table} where id = ?`,
@@ -34,7 +33,6 @@ class ProjectRepository extends AbstractRepository {
     // Return the first row of the result, which represents the project
     return rows[0];
   }
-    */
 
   async readAll(profilId) {
     // Execute the SQL SELECT query to retrieve all projects from the "project" table
