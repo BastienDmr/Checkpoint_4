@@ -48,9 +48,14 @@ class ProjectRepository extends AbstractRepository {
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing project
 
-  // async update(project) {
-  //   ...
-  // }
+  async update(project) {
+    // Execute the SQL INSERT query to add a new profil to the "profil" table
+    const [result] = await this.database.query(
+      "UPDATE project SET title = ?, subtitle = ? WHERE id = ?",
+      [project.title, project.subtitle, project.id]
+    );
+    return result;
+  }
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an project by its ID
@@ -68,3 +73,5 @@ class ProjectRepository extends AbstractRepository {
 }
 
 module.exports = ProjectRepository;
+
+// UPDATE project SET title = "coucou", subtitle = "blablabla" WHERE id = 2

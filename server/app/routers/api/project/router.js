@@ -10,6 +10,7 @@ const router = express.Router();
 const {
   browse,
   read,
+  edit,
   add,
   destroy,
 } = require("../../../controllers/projectActions");
@@ -22,6 +23,8 @@ router.get("/:id", read);
 
 // Route to add a new project
 router.post("/", add);
+
+router.put("/:id", edit);
 
 router.delete("/:id", destroy);
 
