@@ -34,19 +34,21 @@ const router = createBrowserRouter([
           }
         },
       },
+      {
+        path: "/projets/:id",
+        element: <ProjectDetail />,
+        loader: async ({ params }) => {
+          try {
+            const projectDetails = await connexion.get(
+              `/api/project/${params.id}`
+            );
+            return projectDetails.data;
+          } catch (error) {
+            throw new Error(error);
+          }
+        },
+      },
     ],
-  },
-  {
-    path: "/projets/:id",
-    element: <ProjectDetail />,
-    loader: async ({ params }) => {
-      try {
-        const projectDetails = await connexion.get(`/api/project/${params.id}`);
-        return projectDetails.data;
-      } catch (error) {
-        throw new Error(error);
-      }
-    },
   },
 ]);
 
