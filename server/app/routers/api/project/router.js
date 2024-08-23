@@ -7,7 +7,12 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import project-related actions
-const { browse, read, add } = require("../../../controllers/projectActions");
+const {
+  browse,
+  read,
+  add,
+  destroy,
+} = require("../../../controllers/projectActions");
 
 // Route to get a list of items
 router.get("/", browse);
@@ -17,6 +22,8 @@ router.get("/:id", read);
 
 // Route to add a new project
 router.post("/", add);
+
+router.delete("/:id", destroy);
 
 /* ************************************************************************* */
 
