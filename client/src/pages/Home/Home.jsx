@@ -59,6 +59,9 @@ function Home() {
           ))}
         </article>
       </section>
+      <section className="project-container">
+        <H2Element title="Projets" />
+      </section>
     </>
   );
 }
