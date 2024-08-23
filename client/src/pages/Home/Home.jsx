@@ -65,6 +65,7 @@ function Home() {
         <article className="project-box">
           {projects.map((project) => (
             <H3p
+              id={project.id}
               title={project.title}
               text={project.subtitle}
               key={project.id}
