@@ -3,7 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import SkillsComponent from "../../components/Skills/SkillsComponent";
 import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
 import LinkExtern from "../../components/LinkExtern/LinkExtern";
-import H2Element from "../../components/UI/H2Element.jsx/H2Element";
+import H2Element from "../../components/UI/H2Element/H2Element";
+import H3p from "../../components/UI/H3p/H3p";
 
 import github from "../../assets/images/github.svg";
 import linkedin from "../../assets/images/linkedin.svg";
@@ -14,7 +15,7 @@ import discord from "../../assets/images/discord.svg";
 import "./Home.css";
 
 function Home() {
-  const { skills, profil } = useLoaderData();
+  const { skills, profil, projects } = useLoaderData();
 
   // Crée un objet pour regrouper les compétences par catégorie
   const skillsByCategory = skills.reduce((acc, skill) => {
@@ -61,6 +62,15 @@ function Home() {
       </section>
       <section className="project-container">
         <H2Element title="Projets" />
+        <article className="project-box">
+          {projects.map((project) => (
+            <H3p
+              title={project.title}
+              text={project.subtitle}
+              key={project.id}
+            />
+          ))}
+        </article>
       </section>
     </>
   );
