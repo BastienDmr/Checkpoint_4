@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import SkillsComponent from "../../components/Skills/SkillsComponent";
 import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
 import LinkExtern from "../../components/LinkExtern/LinkExtern";
+import H2Element from "../../components/UI/H2Element.jsx/H2Element";
 
 import github from "../../assets/images/github.svg";
 import linkedin from "../../assets/images/linkedin.svg";
@@ -47,7 +48,7 @@ function Home() {
         <LinkExtern data={profil.cv} text="CV" img={download} />
       </section>
       <section className="skills-container">
-        <h2 className="style-title-h2">Skills</h2>
+        <H2Element title="Skills" />
         <article className="skills-article">
           {Object.keys(skillsByCategory).map((category) => (
             <SkillsComponent
