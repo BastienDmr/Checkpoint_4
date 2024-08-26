@@ -5,6 +5,8 @@ import ModifyProject from "../../components/ModifyProject/ModifyProject";
 import connexion from "../../services/connexion";
 import ButtonComponent from "../../components/UI/ButtonComponent/ButtonComponent";
 
+import "./ProjectDetail.css";
+
 function ProjectDetail() {
   const { project } = useLoaderData();
 
@@ -21,8 +23,10 @@ function ProjectDetail() {
 
   return (
     <>
-      <h1>{project.title}</h1>
-      <p>{project.subtitle}</p>
+      <section className="info">
+        <h1 className="style-title-h1">{project.title}</h1>
+        <p className="paragraph-style">{project.subtitle}</p>
+      </section>
       <ModifyProject projectId={project.id} />
       <ButtonComponent
         text="Supprimer"
