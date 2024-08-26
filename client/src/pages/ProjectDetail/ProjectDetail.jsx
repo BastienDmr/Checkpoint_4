@@ -28,12 +28,14 @@ function ProjectDetail() {
         <p className="paragraph-style">{project.subtitle}</p>
       </section>
       <ModifyProject projectId={project.id} />
-      <ButtonComponent
-        text="Supprimer"
-        handleClick={handleDelete}
-        btntype="button"
-        css="btn"
-      />
+      <div className="delete-box">
+        <ButtonComponent
+          text="Supprimer"
+          handleClick={handleDelete}
+          btntype="button"
+          css=""
+        />
+      </div>
     </>
   );
 }

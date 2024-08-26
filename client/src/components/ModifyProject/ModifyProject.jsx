@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import InputComponent from "../UI/InputComponent/InputComponent";
-import ButtonComponent from "../UI/ButtonComponent/ButtonComponent";
+import SubmitComponent from "../UI/ButtonComponent/SubmitComponent";
 
 import connexion from "../../services/connexion";
 import "./ModifyProject.css";
@@ -32,37 +32,34 @@ function ModifyProject({ projectId }) {
   };
 
   return (
-    <div className="form-profil">
-      <h1>Modifier le profil</h1>
+    <div className="form-project">
+      <h1 className="style-title-h3">Modifier le projet</h1>
       <form onSubmit={handleSubmitModify}>
-        <fieldset className="fieldset-profil">
-          <legend className="legend-form">Modification du projet</legend>
-          <InputComponent
-            label="Titre"
-            inputType="text"
-            id="Titre"
-            inputName="title"
-            inputValue={project.title}
-            handleChange={handleProjectChange}
-            classBox="input-profil"
-            isRequired
-          />
-          <InputComponent
-            label="Description"
-            inputType="text"
-            id="Description"
-            inputName="subtitle"
-            inputValue={project.subtitle}
-            handleChange={handleProjectChange}
-            classBox="input-profil"
-            isRequired
-          />
-        </fieldset>
-        <ButtonComponent
-          text="Submit"
+        <legend className="legend-form">Modification du projet</legend>
+        <InputComponent
+          label="Titre"
+          inputType="text"
+          id="Titre"
+          inputName="title"
+          inputValue={project.title}
+          handleChange={handleProjectChange}
+          classBox="input-project"
+          isRequired
+        />
+        <InputComponent
+          label="Description"
+          inputType="text"
+          id="Description"
+          inputName="subtitle"
+          inputValue={project.subtitle}
+          handleChange={handleProjectChange}
+          classBox="input-project"
+          isRequired
+        />
+        <SubmitComponent
+          text="Modifiez"
           handleClick={handleSubmitModify}
-          btntype="submit"
-          css="button-submit"
+          css="submit"
         />
       </form>
     </div>

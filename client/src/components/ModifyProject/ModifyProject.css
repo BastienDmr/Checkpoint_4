@@ -1,0 +1,29 @@
+.legend-form {
+  color: var(--color-text-title);
+  font-size: 1.5rem;
+}
+
+.form-project {
+  h1 {
+    text-align: center;
+  }
+  form {
+    text-align: center;
+    margin: 2rem;
+    color: var(--color-text-subtitle);
+    div {
+      margin: 1rem 0;
+    }
+  }
+  .btn {
+    background-color: var(--color-box);
+    color: var(--color-text-subtitle);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+  }
+  .btn:hover {
+    font-size: 1rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+}
