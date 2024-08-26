@@ -1,4 +1,5 @@
 import { useLoaderData, Link } from "react-router-dom";
+import { useState } from "react";
 
 import SkillsComponent from "../../components/Skills/SkillsComponent";
 import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
@@ -14,6 +15,7 @@ import download from "../../assets/images/download.svg";
 import discord from "../../assets/images/discord.svg";
 
 import "./Home.css";
+import FormAdd from "../../components/Forms/FormAdd/FormAdd";
 
 function Home() {
   const { skills, profil, projects } = useLoaderData();
@@ -26,6 +28,12 @@ function Home() {
     acc[skill.label].push(skill.skill);
     return acc;
   }, {});
+
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  const handleAddClick = () => {
+    setIsFormVisible(!isFormVisible);
+  };
 
   return (
     <>
@@ -63,12 +71,14 @@ function Home() {
       </section>
       <section className="project-container">
         <H2Element title="Projets" />
-        <ButtonComponent
-          text="+ Add"
-          handleClick=""
-          btntype="button"
-          css="button-submit"
-        />
+        <div className="add-container">
+          <ButtonComponent
+            text="Ajouter un projet"
+            handleClick={handleAddClick}
+            css="add"
+          />
+        </div>
+        {isFormVisible ? <FormAdd /> : null}
         <article className="project-box">
           {projects.map((project) => (
             <Link

@@ -22,12 +22,59 @@
     }
   }
 }
+
+.project-container {
+  .add-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 10rem;
+    .btn {
+      background-color: var(--color-box);
+      color: var(--color-text-subtitle);
+      padding: 1rem;
+      border-radius: 1.5rem;
+      border: none;
+    }
+    .btn:hover {
+      font-size: 1.5rem;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+}
 .project-box {
   margin: 0rem 14rem;
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
+  .project-case {
+    animation: slide-in-fwd-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
 }
+
+.project-case:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+.project-case:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.project-case:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.project-case:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.project-case:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.project-case:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
 .skills-article > div:nth-child(1) {
   animation-delay: 0.1s;
 }
