@@ -1,10 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 import SkillsComponent from "../../components/Skills/SkillsComponent";
 import ParagraphElement from "../../components/UI/ParagraphElement/ParagraphElement";
 import LinkExtern from "../../components/LinkExtern/LinkExtern";
 import H2Element from "../../components/UI/H2Element/H2Element";
 import H3p from "../../components/UI/H3p/H3p";
+import ButtonComponent from "../../components/UI/ButtonComponent/ButtonComponent";
 
 import github from "../../assets/images/github.svg";
 import linkedin from "../../assets/images/linkedin.svg";
@@ -62,14 +63,26 @@ function Home() {
       </section>
       <section className="project-container">
         <H2Element title="Projets" />
+        <ButtonComponent
+          text="+ Add"
+          handleClick=""
+          btntype="button"
+          css="button-submit"
+        />
         <article className="project-box">
           {projects.map((project) => (
-            <H3p
-              id={project.id}
-              title={project.title}
-              text={project.subtitle}
+            <Link
+              to={`/projets/${project.id}`}
+              className="project-case"
               key={project.id}
-            />
+            >
+              <H3p
+                id={project.id}
+                title={project.title}
+                text={project.subtitle}
+                key={project.id}
+              />
+            </Link>
           ))}
         </article>
       </section>
