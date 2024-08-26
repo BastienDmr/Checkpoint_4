@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+import cvBastien from "../../assets/CvBastien2024.pdf";
 import "./LinkExtern.css";
 
 function LinkExtern({ data, text, img }) {
@@ -8,7 +9,7 @@ function LinkExtern({ data, text, img }) {
   return (
     <div className="link-box">
       <a
-        href={data}
+        href={cv ? cvBastien : { data }}
         target="_blank"
         rel="noopener noreferrer"
         download={cv ? "CV_Bastien_Domer.pdf" : undefined}
