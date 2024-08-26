@@ -18,7 +18,7 @@ function Navbar() {
         <Link to="/contact" className="paragraph-style">
           Contact
         </Link>
-        <Link to="/" className="paragraph-style">
+        <Link to="/connexion" className="paragraph-style">
           Connexion
         </Link>
       </nav>

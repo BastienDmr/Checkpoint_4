@@ -6,6 +6,7 @@ import connexion from "../../services/connexion";
 import ButtonComponent from "../../components/UI/ButtonComponent/ButtonComponent";
 
 import "./ProjectDetail.css";
+import LinkExtern from "../../components/LinkExtern/LinkExtern";
 
 function ProjectDetail() {
   const { project } = useLoaderData();
@@ -26,6 +27,7 @@ function ProjectDetail() {
       <section className="info">
         <h1 className="style-title-h1">{project.title}</h1>
         <p className="paragraph-style">{project.subtitle}</p>
+        <LinkExtern data={project.link} text="Lien du projet" />
       </section>
       <ModifyProject projectId={project.id} />
       <div className="delete-box">

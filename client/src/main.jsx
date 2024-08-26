@@ -7,6 +7,7 @@ import connexion from "./services/connexion";
 import Home from "./pages/Home/Home";
 import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import ConnexionPage from "./pages/Connexion/ConnexionPage";
 
 import App from "./App";
 
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "connexion",
+        element: <ConnexionPage />,
       },
     ],
   },
