@@ -133,4 +133,9 @@
       width: 40%;
     }
   }
+  .skills-container {
+    .skills-article {
+      flex-wrap: wrap;
+    }
+  }
 }
