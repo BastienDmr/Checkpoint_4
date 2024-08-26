@@ -11,7 +11,7 @@ function LinkExtern({ data, text, img }) {
         href={data}
         target="_blank"
         rel="noopener noreferrer"
-        download={cv ? "CV Bastien Domer" : undefined}
+        download={cv ? "CV_Bastien_Domer.pdf" : undefined}
       >
         <img src={img} alt="" />
         {text}
