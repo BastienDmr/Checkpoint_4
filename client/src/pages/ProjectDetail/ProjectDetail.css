@@ -19,3 +19,19 @@
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
   }
 }
+
+@media screen and (max-width: 391px) {
+  .info {
+    .style-title-h1 {
+      padding: 0;
+      margin-bottom: 3rem;
+    }
+    .paragraph-style {
+      width: 100%;
+    }
+  }
+  .delete-box {
+    display: flex;
+    justify-content: center;
+  }
+}
