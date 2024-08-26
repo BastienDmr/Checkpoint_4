@@ -9,18 +9,18 @@ class ProjectRepository extends AbstractRepository {
 
   // The C of CRUD - Create operation
 
-  /* 
-   async create(project) {
+  // INSERT INTO project (title, subtitle,link,profil_id) VALUES ("Bobo", "Voyageur", "https://exemple", 1)
+
+  async create(project) {
     // Execute the SQL INSERT query to add a new project to the "project" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [project.title, project.user_id]
+      `insert into ${this.table} (title, subtitle,link,profil_id) values (?, ?, ?, ?)`,
+      [project.title, project.subtitle, project.link, project.profil_id]
     );
 
-    // Return the ID of the newly inserted project
+    //   // Return the ID of the newly inserted user
     return result.insertId;
   }
-  */
   // The Rs of CRUD - Read operations
 
   async read(id) {
@@ -73,5 +73,3 @@ class ProjectRepository extends AbstractRepository {
 }
 
 module.exports = ProjectRepository;
-
-// UPDATE project SET title = "coucou", subtitle = "blablabla" WHERE id = 2
