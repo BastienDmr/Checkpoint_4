@@ -6,6 +6,7 @@ import connexion from "./services/connexion";
 
 import Home from "./pages/Home/Home";
 import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 import App from "./App";
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             throw new Error(error);
           }
         },
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },

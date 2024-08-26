@@ -15,7 +15,7 @@ function Navbar() {
         <Link to="/" className="paragraph-style">
           Projets
         </Link>
-        <Link to="/" className="paragraph-style">
+        <Link to="/contact" className="paragraph-style">
           Contact
         </Link>
         <Link to="/" className="paragraph-style">
